@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *; @use "../utilities/mixins" as *;
+.navbar, .navbar-flex {
+  @include flex-between(row); padding: $padding-nav;
+  margin-bottom: 30px; background-color: $color-primario; color: $color-blanco;
+}
+.navbar-flex { flex-direction: column; gap: 10px; @media (min-width: 1024px) { flex-direction: row; } }

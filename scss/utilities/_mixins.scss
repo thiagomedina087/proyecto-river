@@ -1,0 +1,21 @@
+@use "variables" as *;
+
+// Mixins reutilizables
+@mixin flex-between($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin card-river {
+  background-color: $color-blanco;
+  padding: 25px;
+  border-radius: $radio-borde;
+  border: 1px solid $color-borde;
+}
+@mixin img-cover($height: 250px) {
+  width: 100%;
+  height: $height;
+  object-fit: cover;
+  border-radius: $radio-borde;
+}

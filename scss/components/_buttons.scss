@@ -1,0 +1,6 @@
+@use "../utilities/variables" as *;
+.btn-river {
+  background-color: $color-primario; color: $color-blanco; border: none;
+  padding: 10px 20px; border-radius: $radio-borde; font-weight: bold;
+  &:hover { opacity: 0.9; transform: scale(1.05); }
+}

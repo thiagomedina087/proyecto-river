@@ -1,0 +1,14 @@
+@use "../utilities/variables" as *;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background-color: $color-fondo; }
+.contenedor-principal { padding: $padding-contenedor; display: flex; flex-direction: column; gap: $gap-principal; }
+.contenedor-grid-river {
+  display: grid; gap: 20px; padding: $padding-contenedor;
+  grid-template-areas: "header" "main" "galeria" "footer"; grid-template-columns: 1fr;
+  header { grid-area: header; } main { grid-area: main; }
+  footer { grid-area: footer; grid-column: 1 / -1; }
+  @media (min-width: 1024px) {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "header header" "main galeria" "footer footer";
+  }
+}

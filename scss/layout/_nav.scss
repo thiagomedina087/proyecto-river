@@ -1,0 +1,11 @@
+@use "../utilities/variables" as *;
+.nav-links {
+  display: flex; list-style: none; gap: 15px; align-items: center;
+  a { text-decoration: none; color: $color-blanco; font-weight: bold; &:hover { text-decoration: underline; } }
+}
+.nav-link {
+  transition: all 0.3s ease;
+  &:hover { color: $color-negro !important; transform: scale(1.1); }
+  &:focus { outline: 2px solid $color-blanco; outline-offset: 2px; }
+  &:active { color: $color-hover-active !important; }
+}

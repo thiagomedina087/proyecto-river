@@ -1,0 +1,10 @@
+@use "../utilities/variables" as *; @use "../utilities/mixins" as *;
+.hero, .info-river, .articulo-monumental { @include card-river; }
+.lista-river { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; padding-left: 20px; }
+.img-monumental-borde { width: 100%; max-width: 600px; margin-top: 15px; border-radius: $radio-borde; }
+.galeria-river {
+  grid-area: galeria; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;
+  div { background: $color-blanco; padding: 20px; border-radius: $radio-borde; border: 1px solid $color-borde; text-align: center; font-weight: bold; }
+  figure img { @include img-cover(250px); }
+  @media (min-width: 1024px) { grid-template-columns: repeat(2, 1fr); }
+}
